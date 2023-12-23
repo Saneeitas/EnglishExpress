@@ -1,12 +1,12 @@
 /** @format */
 import { Routes, Route } from "react-router-dom";
-import ChatUI from "./pages/ChatUI";
+import Chat from "./pages/Chat";
 
 const App = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<ChatUI />}></Route>
+      <Route path="/" element={<Chat />}></Route>
      
     </Routes>
   );
