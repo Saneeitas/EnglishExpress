@@ -1,9 +1,20 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
+import { useSpeechRecognition } from "react-speech-kit";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPaperPlane,
+  faMicrophone,
+  faStopCircle,
+} from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
+
 
 const MessageInput = ({ onSendMessage }) => {
-  const [newMessage, setNewMessage] = useState("");
+const [newMessage, setNewMessage] = useState("");
+const [isRecording, setIsRecording] = useState(false);
+
+
+
 
   const handleSendMessage = async () => {
     if (newMessage.trim() === "") return;
@@ -14,8 +25,41 @@ const MessageInput = ({ onSendMessage }) => {
     setNewMessage("");
   };
 
+  const handleStartRecording = () => {
+    setIsRecording(true);
+    listen();
+  };
+
+  const handleStopRecording = () => {
+    setIsRecording(false);
+    stop();
+   
+  };
+  
+  const { listen, stop } = useSpeechRecognition({
+    onResult: (result) => {
+      setNewMessage(result);
+    },
+  });
+
+
   return (
     <div style={styles.inputContainer}>
+      {!isRecording ? (
+        <button
+          onClick={handleStartRecording}
+          style={{ ...styles.recordButton, background: "rgb(123,58,237)" }}
+        >
+          <FontAwesomeIcon icon={faMicrophone} style={styles.icon} />
+        </button>
+      ) : (
+        <button
+          onClick={handleStopRecording}
+          style={{ ...styles.recordButton, background: "red" }}
+        >
+          <FontAwesomeIcon icon={faStopCircle} style={styles.icon} />
+        </button>
+      )}
       <input
         type="text"
         value={newMessage}
@@ -52,6 +96,13 @@ const styles = {
   },
   icon: {
     color: "white",
+  },
+  recordButton: {
+    padding: "15px",
+    borderRadius: "10px",
+    cursor: "pointer",
+    border: "1px solid #ccc",
+    margin: "7px",
   },
 };
 
