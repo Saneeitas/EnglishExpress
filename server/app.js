@@ -8,13 +8,13 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 const User = require("./models/User");
 const userRoutes = require("./routes/user");
-const shopRoutes = require("./routes/shop");
+const chatRoutes = require("./routes/chat");
 
 const app = express();
 
 app.use(
   cors({
-    origin: "http://192.168.206.23:3000",
+    origin: "http://localhost:3000",
     credentials: true,
   })
 );
@@ -36,7 +36,7 @@ app.use(methodOverride("_method"));
 
 mongoose.set("strictQuery", true);
 mongoose
-  .connect("mongodb://localhost:27017/shopDB")
+  .connect("mongodb://localhost:27017/EnglishExpressDB")
   .then(() => {
     console.log("Connected to the database");
   })
@@ -55,10 +55,10 @@ passport.deserializeUser((id, done) => {
 });
 
 //Routes
-app.use("/api", shopRoutes);
+app.use("/api", chatRoutes);
 app.use("/api", userRoutes);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
