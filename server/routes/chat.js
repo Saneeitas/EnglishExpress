@@ -7,7 +7,6 @@ router.post("/chat", async (req, res) => {
     model: "gpt-3.5-turbo",
   });
 
-  res.status(200).json(completion.choices[0]);
   console.log(completion.choices[0]);
 });
 

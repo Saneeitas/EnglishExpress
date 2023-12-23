@@ -35,6 +35,8 @@ const styles = {
     margin: "8px 0",
     marginLeft: "auto",
     width: "60%",
+    fontFamily: "'Montserrat', sans-serif",
+    fontWeight: 500,
   },
   botMessage: {
     textAlign: "left",
@@ -45,6 +47,8 @@ const styles = {
     margin: "8px 0",
     marginRight: "auto",
     width: "60%",
+    fontFamily: "'Montserrat', sans-serif",
+    fontWeight: 500,
   },
 };
 

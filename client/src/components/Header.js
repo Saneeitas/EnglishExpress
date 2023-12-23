@@ -1,5 +1,7 @@
 // Header.js
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCog } from "@fortawesome/free-solid-svg-icons"; // Import the settings icon
 import profilePicture from "../pic/logo.jpg"; // Import your profile picture
 
 const Header = () => {
@@ -9,12 +11,14 @@ const Header = () => {
         <h1 style={styles.title}>English Express </h1>
       </div>
       <div style={styles.centerSection}>
-        <img src={profilePicture} alt="Profile" style={styles.profilePicture} />
-        <span style={styles.name}>Ibrahim Dbee</span>
+        {/* <img src={profilePicture} alt="Profile" style={styles.profilePicture} />
+        <span style={styles.name}>Ibrahim Dbee</span> */}
       </div>
       <div style={styles.rightSection}>
         {/* Add your icon or any content for the right section */}
-        <span>🌟</span>
+        <span>
+          <FontAwesomeIcon icon={faCog} />
+        </span>
       </div>
     </header>
   );
@@ -30,12 +34,15 @@ const styles = {
     alignItems: "center",
     width: "100%",
   },
+
   leftSection: {
     flex: 1,
     marginLeft: "45px",
   },
   title: {
     margin: 0,
+    fontFamily: "'Montserrat', sans-serif",
+    fontWeight: 500,
   },
   centerSection: {
     flex: 1,

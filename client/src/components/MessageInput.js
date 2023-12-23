@@ -6,7 +6,6 @@ import {
   faMicrophone,
   faStopCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import axios from "axios";
 
 
 const MessageInput = ({ onSendMessage }) => {
@@ -55,7 +54,7 @@ const [isRecording, setIsRecording] = useState(false);
       ) : (
         <button
           onClick={handleStopRecording}
-          style={{ ...styles.recordButton, background: "red" }}
+          style={{ ...styles.recordButton, background: "darkred" }}
         >
           <FontAwesomeIcon icon={faStopCircle} style={styles.icon} />
         </button>
@@ -86,6 +85,8 @@ const styles = {
     borderRadius: "10px",
     border: "1px solid #ccc",
     marginRight: "8px",
+    fontFamily: "'Montserrat', sans-serif",
+    fontWeight: 500,
   },
   sendButton: {
     padding: "15px",
