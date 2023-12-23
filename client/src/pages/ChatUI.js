@@ -30,7 +30,7 @@ const ChatUI = () => {
         {
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer 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`,
+            Authorization: `Bearer ${process.env.REACT_APP_OPENAI_KEY}`,
           },
         }
       );
