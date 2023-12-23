@@ -1,6 +1,6 @@
-// MessageInput.js
 import React, { useState } from "react";
-import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 const MessageInput = ({ onSendMessage }) => {
   const [newMessage, setNewMessage] = useState("");
@@ -24,7 +24,7 @@ const MessageInput = ({ onSendMessage }) => {
         style={styles.input}
       />
       <button onClick={handleSendMessage} style={styles.sendButton}>
-        Send
+        <FontAwesomeIcon icon={faPaperPlane} style={styles.icon} />
       </button>
     </div>
   );
@@ -38,17 +38,20 @@ const styles = {
   },
   input: {
     flex: 1,
-    padding: "8px",
-    borderRadius: "4px",
+    padding: "15px",
+    borderRadius: "10px",
     border: "1px solid #ccc",
+    marginRight: "8px",
   },
   sendButton: {
-    marginLeft: "10px",
-    padding: "8px",
-    borderRadius: "4px",
-    background: "#4caf50",
-    color: "white",
+    padding: "15px",
+    borderRadius: "10px",
+    background: "rgb(123,58,237)",
     cursor: "pointer",
+    border: "1px solid #ccc",
+  },
+  icon: {
+    color: "white",
   },
 };
 

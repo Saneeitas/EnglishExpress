@@ -27,8 +27,7 @@ const Chat = () => {
         {
           headers: {
             "Content-Type": "application/json",
-            Authorization:
-              "Bearer ",
+            Authorization: `Bearer ${process.env.REACT_APP_OPENAI_KEY}`,
           },
         }
       );
@@ -63,12 +62,11 @@ const styles = {
     alignItems: "center",
     minHeight: "100vh",
   },
-  chatContainer: {
-    width: "300px",
-    margin: "20px",
+  chatContainer: { 
+    margin: "10px",
   },
   container: {
-    width: "300px",
+    width: "600px",
     border: "1px solid #ccc",
     borderRadius: "8px",
     overflow: "hidden",

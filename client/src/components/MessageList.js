@@ -23,25 +23,28 @@ const styles = {
     minHeight: "500px",
     padding: "10px",
     overflowY: "auto",
-    background: "#f2f2f2", // Change the background color of the message container to gray
+    background: "#f4f7ff",
     borderRadius: "8px",
-    width: "100%", // Expand the width of the message container
   },
   userMessage: {
     textAlign: "right",
     padding: "8px",
-    background: "rgb(123,58,237)", // Change the background color of user messages
-    color: "white", // Change the text color to white
+    background: "rgb(123,58,237)",
+    color: "white",
     borderRadius: "8px",
     margin: "8px 0",
+    marginLeft: "auto",
+    width: "60%",
   },
   botMessage: {
     textAlign: "left",
     padding: "8px",
-    background: "#404040", // Change the background color of bot messages to dark gray
-    color: "black", // Change the text color to black
+    background: "#f2f2f2",
+    color: "black",
     borderRadius: "8px",
     margin: "8px 0",
+    marginRight: "auto",
+    width: "60%",
   },
 };
 
