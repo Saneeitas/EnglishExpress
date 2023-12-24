@@ -1,10 +1,7 @@
 import React from "react";
 import Speech from "react-speech";
 
-
-
 const MyComponent = () => {
-    
   return (
     <div>
       <Speech
@@ -17,6 +14,5 @@ const MyComponent = () => {
     </div>
   );
 };
-
 
 export default MyComponent;
