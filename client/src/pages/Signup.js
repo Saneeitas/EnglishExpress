@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "../css/form.css";
 
 const Form = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [isChecked, setIsChecked] = useState(false);
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add your form submission logic here
-    console.log("Submitting form...", email, password);
+    
   };
 
   return (
