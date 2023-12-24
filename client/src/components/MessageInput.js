@@ -38,6 +38,7 @@ const [isRecording, setIsRecording] = useState(false);
   const { listen, stop } = useSpeechRecognition({
     onResult: (result) => {
       setNewMessage(result);
+      console.log(result)
     },
   });
 

@@ -1,0 +1,77 @@
+ .main-heading {
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 700;
+     color: white;
+     letter-spacing: 15px;
+     text-align: center;
+   
+ }
+
+ @media screen and (max-width: 1008px) {
+     .main-heading {
+         letter-spacing: 5px;
+         text-align: left;
+         padding-left: 30px;
+     }
+ }
+
+ .heading {
+     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+     color: white;
+     text-align: center;
+ }
+
+ .container {
+     width: 45%;
+     margin: 0 auto;
+     padding: 30px 30px 60px 30px;
+     background-color: #fff;
+     /* opacity: 0.4; */
+     border-radius: 20px;
+     color: #000000;
+
+ }
+
+ @media screen and (max-width: 1008px) {
+     .container {
+         width: 100%;
+         border-radius: 0px;
+
+
+     }
+ }
+
+ @media screen and (max-width: 992px) {
+     .container {
+         width: 100%;
+     }
+ }
+
+ .right-inner-addon {
+     position: relative;
+ }
+
+ .right-inner-addon input {
+     padding-right: 35px !important;
+ }
+
+ .right-inner-addon i {
+     position: absolute;
+     right: 0px;
+     padding: 12px 12px;
+     pointer-events: none;
+ }
+
+ .toggle-password {
+     float: right;
+     cursor: pointer;
+     margin-right: 10px;
+     margin-top: -40px;
+ }
+
+ .form-control {
+
+     border: none;
+     padding: 5px 5px 20px 10px;
+     box-shadow: none;
+ }

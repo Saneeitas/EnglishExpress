@@ -15,6 +15,7 @@ const Chat = () => {
 
     try {
       // Call the ChatGPT API to get the bot's response
+    
       const response = await axios.post(
         "https://api.openai.com/v1/chat/completions",
         {
@@ -35,9 +36,13 @@ const Chat = () => {
       // Add the bot's response to the chat
       const botResponse = response.data.choices[0].message.content;
       setMessages([...messages, { role: "bot", content: botResponse }]);
+       
+      
     } catch (error) {
       console.error("Error sending message to ChatGPT:", error.response || error);
       // Handle error (e.g., display an error message to the user)
+       
+     
     }
   };
 

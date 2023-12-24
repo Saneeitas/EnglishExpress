@@ -40,7 +40,7 @@ const styles = {
   },
   botMessage: {
     textAlign: "left",
-    padding: "8px",
+    padding: "18px",
     background: "#f2f2f2",
     color: "black",
     borderRadius: "8px",
